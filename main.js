@@ -47,7 +47,7 @@ Apify.main(async () => {
     
     console.log(`Opening URL: ${input.url}`);  
     const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setViewport({ width: 1920, height: 10000 });
     await page.goto(input.url, {waitUntil: 'networkidle2'});
 
     // wait 5 seconds (if there is some dynamic content)
